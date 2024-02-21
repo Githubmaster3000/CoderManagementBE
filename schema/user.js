@@ -11,11 +11,9 @@ const userSchema = new mongoose.Schema({
     enum: ["manager", "employee"],
     default: "employee",
     required: true,
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
+  }
+}, {
+  timestamps: true
 });
 
 const User = mongoose.model("User", userSchema);

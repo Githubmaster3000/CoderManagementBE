@@ -19,19 +19,9 @@ const taskSchema = new mongoose.Schema({
   assignedTo: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  updatedAt: {
-    type: Date,
-    default: null,
-  },
-  deletedAt: {
-    type: Date,
-    default: null,
-  },
+  }
+}, {
+  timestamps: true
 });
 
 const Task = mongoose.model("Task", taskSchema);
